@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "aks_rg" {
-  name     = "aks-resource-group"
+  name     = "poc-15"
   location = "East US"
 }
 
