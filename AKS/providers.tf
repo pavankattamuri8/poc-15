@@ -1,15 +1,18 @@
 terraform {
+  required_version = "1.15.6"
+
+  cloud {
+    organization = "pavankattamuri"
+
+    workspaces {
+      name = "poc-15"
+    }
+  }
+
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
       version = "~> 3.0"
-    }
-  }
-  backend "remote" {
-    organization = "pavankattamuri"
-
-    workspaces {
-      name = "azure-aks-deployment"
     }
   }
 }
